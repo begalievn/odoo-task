@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+second_module.access_second_model,access_second_model,second_module.model_second_model,base.group_user,1,1,1,1
+second_module.access_second_model_admin,access_second_model_admin,second_module.model_second_model,base.group_erp_manager,1,1,1,1

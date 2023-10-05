@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_vacancy_candidates_form" model="ir.ui.view">
+        <field name="name">vacancy.candidate.form</field>
+        <field name="model">second.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="age"/>
+                        <field name="gender"/>
+                        <field name="remote"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_vacancy_candidates_tree" model="ir.ui.view">
+        <field name="name">vacancy.candidate.tree</field>
+        <field name="model">second.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="age"/>
+                <field name="gender"/>
+                <field name="remote"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_second" model="ir.actions.act_window">
+        <field name="name">Candidates</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">second.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="menu_candidates"
+            name="Candidates"
+            parent="menu_second_vacancies"
+            action="action_second"
+            sequence="10"/>
+
+    <data>
+        <record model="second.model" id="candidate_record_1">
+            <field name="name">Filippo</field>
+            <field name="age">32</field>
+            <field name="gender">male</field>
+            <field name="remote">False</field>
+        </record>
+        <record model="second.model" id="candidate_record_2">
+            <field name="name">Augustin</field>
+            <field name="age">18</field>
+            <field name="gender">male</field>
+            <field name="remote">True</field>
+        </record>
+    </data>
+</odoo>
